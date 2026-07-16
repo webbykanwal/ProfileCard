@@ -1,75 +1,95 @@
-body{
-    background:lightblue;
+*{
     margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#4facfe,#6c63ff);
     min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
     padding:20px;
+}
+
+.container{
+    width:100%;
+    max-width:380px;
+    background:#fff;
+    padding:30px;
+    border-radius:20px;
     text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+    transition:.3s;
 }
-div{
-    border-radius: 20px;
-    background:white;
-    width:90%;
-    max-width:300px ;
-    justify-content:center;
-    align-items:center;
-    margin:auto;
-    padding:20px;
-    border:2px solid black ;
-    box-shadow: 0px 0px 10px gray;
-}    
+
+.container:hover{
+    transform:translateY(-5px);
+}
+
 img{
-    
-    width:150px;
-    max-width: 100%;
-    height:auto;
+    width:160px;
+    height:160px;
     border-radius:50%;
-    box-shadow: 0 0 8px gray;
-
+    object-fit:cover;
+    border:5px solid #4facfe;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+    transition:.3s;
 }
+
+img:hover{
+    transform:scale(1.05);
+}
+
 #head{
-    color:blue;
-    background:lightgray;
-    font-family: Arial, Helvetica, sans-serif;
+    margin-top:20px;
+    color:#2563eb;
+    font-size:30px;
+    background:none;
 }
-p{
-    font-weight: bold;
-    
-    line-height: normal;
-    
-}
-#btn{
-    background:blue;
-    color:white;
-    font-weight: bold;
-    
-    transition: 0.3s;
-    cursor: pointer;
-    padding:10px 20px;
-    border:none;
-}
-#btn:hover{
-    background:darkblue
 
+p{
+    margin-top:12px;
+    color:#444;
+    font-size:17px;
+    line-height:1.6;
+    font-weight:500;
 }
-div:hover{
-    transform:scale(1.03);
-    transition:0.3s;
+
+#btn{
+    margin-top:25px;
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    background:#2563eb;
+    color:white;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 8px 20px rgba(37,99,235,.3);
 }
-/* Responsive */
+
+#btn:hover{
+    background:#1d4ed8;
+    transform:translateY(-3px);
+}
+
+/* Mobile Responsive */
 
 @media (max-width:768px){
 
-div{
-    width:100%;
-    max-width:340px;
-    padding:20px;
+.container{
+    max-width:100%;
+    padding:25px;
 }
 
 img{
-    width:130px;
+    width:140px;
+    height:140px;
 }
 
 #head{
@@ -77,13 +97,12 @@ img{
 }
 
 p{
-    font-size:17px;
+    font-size:16px;
 }
 
 #btn{
-    width:100%;
+    font-size:16px;
     padding:14px;
-    font-size:17px;
 }
 
 }
